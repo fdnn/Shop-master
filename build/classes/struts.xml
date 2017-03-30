@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+      
+<struts>  
+    <constant name="struts.action.extension" value="action" />  
+      
+    <package name="shoping" extends="struts-default">
+   		<global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="success_close">/common/success_close.jsp</result>
+        </global-results>
+        
+        
+        
+        
+        
+    	<action name="adminAdd" method="adminAdd" class="com.xiaohai.action.AdminAction" >
+        </action>
+    	<action name="adminDel" method="adminDel" class="com.xiaohai.action.AdminAction">
+        </action>
+    	<action name="adminManage" method="adminManage" class="com.xiaohai.action.AdminAction">
+            <result name="success">/admin/index/adminManage.jsp</result>
+        </action>
+    	<action name="admin_login" method="login" class="com.xiaohai.action.AdminAction">
+    		<result name="success">/loginSuccess.jsp</result>
+    		<result name="error">/admin.jsp</result>
+    	</action>
+    	<action name="admin_pwEdit" method="pwEdit" class="com.xiaohai.action.AdminAction">
+    	</action>
+        
+        
+        
+        <action name="gonggaoAdd" method="gonggaoAdd" class="com.xiaohai.action.GonggaoAction">
+        </action>
+        <action name="gonggaoDel" method="gonggaoDel" class="com.xiaohai.action.GonggaoAction">
+        </action>
+        <action name="gonggaoMana" method="gonggaoMana" class="com.xiaohai.action.GonggaoAction">
+            <result name="success">/admin/gonggao/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoDetail" method="gonggaoDetail" class="com.xiaohai.action.GonggaoAction">
+            <result name="success">/admin/gonggao/gonggaoDetail.jsp</result>
+        </action>
+        
+        <action name="gonggaoAll" method="gonggaoAll" class="com.xiaohai.action.GonggaoAction">
+            <result>/shopping/gonggao/gonggaoAll.jsp</result>
+        </action>
+        <action name="gonggaoDetail2" method="gonggaoDetail" class="com.xiaohai.action.GonggaoAction">
+            <result>/shopping/gonggao/gonggaoDetail.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="catelogAdd" class="com.xiaohai.action.CatelogAction" method="catelogAdd">
+        </action>
+        <action name="catelogDel" class="com.xiaohai.action.CatelogAction" method="catelogDel">
+        </action>
+        <action name="catelogMana" class="com.xiaohai.action.CatelogAction" method="catelogMana">
+             <result name="success">/admin/catelog/catelogMana.jsp</result>
+        </action>
+        
+        <action name="catelogList" class="com.xiaohai.action.CatelogAction" method="catelogList">
+             <result name="success">/admin/goods/goodsAdd.jsp</result>
+        </action>
+        
+		<action name="catelogAll" class="com.xiaohai.action.CatelogAction" method="catelogList">
+             <result name="success">/shopping/catelog/catelogAll.jsp</result>
+        </action>
+ 		<action name="goodsByCatelog" class="com.xiaohai.action.CatelogAction" method="goodsByCatelog">
+            <result name="success">/shopping/goods/goodsByCatelog.jsp</result>
+        </action>
+        
+
+
+		<action name="goodsAdd" class="com.xiaohai.action.GoodsAction" method="goodsAdd">
+        </action>
+        <action name="goodsDel" class="com.xiaohai.action.GoodsAction" method="goodsDel">
+        </action>
+        <action name="goodsMana" class="com.xiaohai.action.GoodsAction" method="goodsMana">
+            <result name="success">/admin/goods/goodsMana.jsp</result>
+        </action>
+        <action name="goodsDetail" class="com.xiaohai.action.GoodsAction" method="goodsDetail">
+            <result name="success">/admin/goods/goodsDetail.jsp</result>
+        </action>
+        <action name="goodsDate" class="com.xiaohai.action.GoodsAction" method="goodsDate">
+            <result name="success">/admin/goods/goodsUpdate.jsp</result>
+        </action>
+        <action name="goodsUpdate" class="com.xiaohai.action.GoodsAction" method="goodsUpdate">
+            <result name="success">/admin/goods/goodsMana.jsp</result>
+        </action>
+        
+        <action name="goodsKucun" class="com.xiaohai.action.GoodsAction" method="goodsKucun">
+            <result name="success">/admin/goods/goodsKuncun.jsp</result>
+        </action>
+        
+        <action name="goodsAllYesTejia" class="com.xiaohai.action.GoodsAction" method="goodsAllYesTejia">
+            <result name="success">/shopping/goods/goodsAllYesTejia.jsp</result>
+        </action>
+        <action name="goodsAllYesTuijian" class="com.xiaohai.action.GoodsAction" method="goodsAllYesTuijian">
+            <result name="success">/shopping/goods/goodsAllYesTuijian.jsp</result>
+        </action>
+        <action name="goodsDetail2" class="com.xiaohai.action.GoodsAction" method="goodsDetail">
+            <result name="success">/shopping/goods/goodsDetail.jsp</result>
+        </action>
+        <action name="goodsAllSearch" class="com.xiaohai.action.GoodsAction" method="goodsAllSearch">
+            <result name="success">/shopping/goods/goodSearch.jsp</result>
+        </action>
+       
+        
+        
+        <action name="userMana" class="com.xiaohai.action.UserAction" method="userMana">
+             <result name="success">/admin/user/userMana.jsp</result>
+        </action>
+        <action name="userDel" class="com.xiaohai.action.UserAction" method="userDel">
+        </action>
+        
+        
+        <action name="userXinxi" class="com.xiaohai.action.UserAction" method="userXinxi">
+             <result name="success">/admin/user/userXinxi.jsp</result>
+        </action>
+        <action name="userLogin" class="com.xiaohai.action.UserAction" method="userLogin">
+        </action>
+        <action name="userLogout" class="com.xiaohai.action.UserAction" method="userLogout">
+             <result name="success">/shopping.jsp</result>
+        </action> 
+        <action name="userReg" class="com.xiaohai.action.UserAction" method="userReg">
+        </action>
+        <action name="userUpdate" class="com.xiaohai.action.UserAction" method="userUpdate">
+        </action>
+        <action name="userXinxi2" class="com.xiaohai.action.UserAction" method="userUpdate">
+        </action>
+        
+        
+        
+        
+        <action name="orderMana" class="com.xiaohai.action.OrderAction" method="orderMana">
+            <result name="success">/admin/order/orderMana.jsp</result>
+        </action>
+        <action name="orderDelByAdmin" class="com.xiaohai.action.OrderAction" method="orderDelByAdmin">
+        </action>
+        <action name="orderShouli" class="com.xiaohai.action.OrderAction" method="orderShouli">
+        </action>
+        <action name="orderDetail" class="com.xiaohai.action.OrderAction" method="orderDetail">
+            <result name="success">/shopping/order/orderDetail.jsp</result>
+        </action>
+        
+        <action name="orderQueren" class="com.xiaohai.action.OrderAction" method="orderQueren">
+            <result name="success">/shopping/order/orderQueren.jsp</result>
+        </action>
+        <action name="orderSubmit" class="com.xiaohai.action.OrderAction" method="orderSubmit">
+            <result name="success">/shopping/order/orderSubmit.jsp</result>
+        </action>
+        <action name="myOrder" class="com.xiaohai.action.OrderAction" method="myOrder">
+            <result name="success">/shopping/order/myOrder.jsp</result>
+        </action>
+        <action name="orderDel" class="com.xiaohai.action.OrderAction" method="orderDel">
+        </action>
+ 
+        <action name="logout" class="com.xiaohai.action.AdminAction" method="logout">
+            <result name="success">/admin.jsp</result>
+        </action>
+        
+        
+        
+        <action name="addToCart" class="com.xiaohai.action.CartAction" method="addToCart">
+        </action>
+        <action name="myCart" class="com.xiaohai.action.CartAction" method="myCart">
+            <result name="success">/shopping/cart/myCart.jsp</result>
+        </action>
+        <action name="changeNumFromCart" class="com.xiaohai.action.CartAction" method="changeNumFromCart">
+        </action>
+        <action name="clearCart" class="com.xiaohai.action.CartAction" method="clearCart">
+        </action>
+        <action name="delGoodsFromCart" class="com.xiaohai.action.CartAction" method="delGoodsFromCart">
+        </action>
+        
+        
+        
+        <action name="shopping" class="com.xiaohai.action.ShoppingAction" method="shopping">
+            <result name="success">/shopping/index.jsp</result>
+        </action>
+    </package>
+      
+</struts>   

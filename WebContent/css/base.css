@@ -1,0 +1,151 @@
+/*common */
+body, div, a, img, p, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+}
+body{font:14px/1.5 'Microsoft YaHei';}
+.shoppingBoby {font:14px/1.5 'Microsoft YaHei';background-color: #fafaf9;}
+.none{display:none}
+.block{display:block}
+.clear{clear:both}
+.left{float:left}
+.right{float:right}
+.white,.white a:link,.white a:visited{color:#fff;}
+.deleteLink:hover{color: red}
+
+a{color:#428bca;text-decoration:none;}
+a:hover,a:active{color:#ff9900;text-decoration:none;}
+
+
+/*top.jsp  */
+.topbar-wrap{height:50px;line-height:50px;background:#000;}
+.topbar-context{font-size:18px;padding:0 20px;}
+.topbar-list li{float:left;}
+.topbar-list li a{float:left;margin-right:5px;padding:0 25px;}
+.topbar-list li a:hover{background:#343434;}
+.topbar-list li a.on{color:#fff;background:#033b70;}
+
+/*menu.jsp  */
+.menubar-wrap{float: left;width: 189px;min-height:900px;background: #f2f2f2;border-right:1px solid #ccc;}
+.menubar-title{line-height: 40px;text-indent:1.5em;font-size: 12px;}
+.menubar-title h1{font-weight: normal;}
+.menubar-content{padding-top: 5px;}
+.menubar-list li{border:1px solid #e5e5e5;border-width:1px 0 ;margin-right: 5px;color: #888;font-size: 14px;}
+.menubar-list li a{padding: 0 16px 0 20px;display: block;height: 38px;line-height: 38px;color: #333;}
+.menubar-list li a:hover{background: #fff;color: #1963AA;}
+.menubar-list li:hover ul{display:block; }
+.menubar-sub{border-top: 1px solid #e5e5e5;background: #fff;font-size: 11px;display:none; }
+.menubar-sub li{padding-left: 10px;}
+
+/*userinfo.jsp  */
+.userinfobar-wrap{border:solid #e5e5e5; border-width:1px 0px 0px 1px;margin-top:10px;}
+.userinfobar-wrap tr td{border:solid #e5e5e5; border-width:0px 1px 1px 0px;}
+
+#header,  #Banner, #Main { width: 1000px;margin: 0 auto;}
+#Nav, #Footer{width: 100%;}
+
+/*head.jsp 页眉头部*/
+#header {height: 100px;}
+#header #Logo {float: left;}
+#header #logoLink {width: 75px;height: 75px;background: url(../images/logo.png) no-repeat;
+background-size: 75px 75px;float: left;margin-top: 20px;margin-left: 20px;}
+#header #name {float: left;}
+#header h1 {color: #60B029;font-weight: bold;padding-top: 35px;}
+#header p {font-family: Arial;font-size: 14px;margin-left: 5px;}
+#header img {float: left;width: 35px;margin-left: 210px;margin-top: 35px;}
+#header .p1 {float: left;margin-top: 30px;margin-left: 13px;font: 17px "Microsoft YaHei";color: #666;}
+#header .span {color: #f57921;font: 23px Arial;}
+
+/*head.jsp 主菜单-一级导航*/
+#Nav {z-index: 100;height: 85px;border-top: 15px solid #000;
+    /*border-bottom: 1px solid #000;*/}
+#Nav ul {padding-left: 175px;height: 70px;list-style-type: none;background: #fff;border-bottom: 1px solid #000;z-index: 4;}
+#Nav ul li {height: 70px;float: left;}
+#Nav ul li a {display: block; /*转化成块状元素，因链接是内链元素，若想给它定义下面的属性，必须将它转化成块状元素，*/
+	height: 70px;
+    text-align: center;color: #2a2a2a;line-height: 70px;padding:0 22px;font-size: 16px;
+    font-family: "Microsoft YaHei";text-decoration: none; /*去除链接样式，默认是有下划线的，加上这句就没有任何样式，下划线也没有了*/
+    float: left; /*这句一定要加，不然在IE6中会出现这种效果*/
+    border-right: 1px solid #e4e4e4;z-index: 5;
+    /*文本阴影*/
+    /*text-shadow: 4px 4px 4px #000;*/
+    /*渐变效果*/
+    /*过渡transition:过渡的CSS名;动画持续时间;时间函数;延迟时间*/
+    transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out; /* Safari 和 Chrome */
+    -moz-transition: color 0.5s ease-in-out; /* Firefox 4 */
+    -o-transition: color 0.5s ease-in-out; /* Opera */}
+#Nav ul li:first-child a {border-left: 1px solid #e4e4e4;}
+/*#Nav ul li:last-child a {border-right: none;}*/
+#Nav ul li a:hover, body#page_zixun #zixun,body#page_fuwu #fuwu {color: #72b744;
+    /*background: #60b029;*/}
+    
+/*head.jsp 子菜单-二级导航*/
+#Nav ul li ul {background: #fff;
+    /*暂时隐藏子菜单*/
+    /*display: none;*/
+    /*清除掉继承一级菜单中的padding-left:30px*/
+    padding-left: 0;padding-top: 14px;
+    /*不透明度*/
+    opacity: 0;
+    /*-webkit-border-radius: 0 0 25px 25px;
+    -moz-border-radius: 0 0 25px 25px;
+    border-radius: 0 0 25px 25px;*/
+    /*下拉框不透明度渐变*/
+    transition: opacity 0.5s ease 0.1s;
+    -webkit-transition: opacity 0.5s ease 0.1s;
+    -moz-transition: opacity 0.5s ease 0.1s;
+    -o-transition: opacity 0.5s ease 0.1s;}
+#Nav ul li ul li {
+    /*把二级菜单继承一级菜单的浮动清除掉*/
+    float: none;width: 108px;background: #358b11;padding:0;margin: 0;border-bottom: 1px solid #8ec273;height: 0;
+    /*隐藏溢出的内容*/
+    overflow: hidden;
+    /*下拉框高度渐变*/
+    transition: height 0.3s ease 0.1s;
+    -webkit-transition: height 0.3s ease 0.1s;
+    -moz-transition: height 0.3s ease 0.1s;
+    -o-transition: height 0.3s ease 0.1s;}
+#Nav ul li ul li a {font: 16px/38px "microsoft Yahei";
+    /*把二级菜单继承一级菜单的链接样式清除掉*/
+    height:43px;color:#fff;border-right: none;}
+/*气死人的二承一之继承性*/
+#Nav ul li ul li:first-child a {border-left: none;}
+#Nav ul li:hover ul {
+    /*鼠标划过时显示这块内容*/
+    display: block;
+    /*当其绝对定位后，它将脱离原来文档流，不再占据空间，因此也不会再把下边内容挤跑了*/
+    z-index: 2;position: absolute;top: 170px;
+    /*不透明度1-实现渐变*/
+    opacity: 1;}
+#Nav ul li:hover ul li {
+	overflow: visible;
+    /*高度45-实现渐变*/
+    height: 43px;
+}
+#Nav ul li ul li a:hover {background: #60b029;color: #fff;border-bottom: 2px solid #fff;}
+
+/*Main 主界面*/
+#Main{margin-top:10px;padding:0 8px 10px;background-color: #fff;height: 100%}
+.main_lr{margin-bottom:8px;}
+.main_bc{border:#cccccc 1px solid; width:662px;}
+.main_bar_shuxing{height:28px; line-height:28px;background-color:#e5e5e5; text-indent:10px;color:#60b029}
+.main_context{text-align:center; padding:6px; height:auto;}
+
+/*foot.jsp 页脚*/
+#Footer {clear: both;}
+#footer_t, #footer_b {text-align: center;font-family: Arial, "宋体", "Microsoft YaHei";font-size: 12px;}
+#footer_t {background: url("../images/footer__bg.gif");clear: both;height: 35px;line-height: 35px;}
+#footer_t a {color: #999;text-decoration: none;}
+#footer_t a:hover {color: #ff9900}
+#footer_t span {color: #999;padding: 0 10px;}
+#footer_b {background-color: #60b029;color: #fff;height: 28px;line-height: 28px;}
+
+/*kefu.jsp 客服导航*/
+.side{position:fixed;width:54px;height:54px;right:0;top:240px;z-index:100;}
+.side ul li{width:54px;height:54px;float:left;position:relative;border-bottom:1px solid #2a2a2a;}
+.side ul li .sidebox{position:absolute;width:54px;height:54px;top:0;right:0;transition:all 0.5s;background:#000;
+    color:#fff;font:14px/54px "微软雅黑";}
+.side ul li .sidetop{width:54px;height:54px;line-height:54px;display:inline-block;background:#000;}
+.side ul li .sidetop:hover{background:#60b029;}

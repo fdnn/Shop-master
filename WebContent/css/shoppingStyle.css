@@ -1,0 +1,10 @@
+body, div, a, img, p, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+}
+/*È«¾Öcss*/
+body {
+    background-color: #fafaf9;
+}
+
